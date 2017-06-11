@@ -22,6 +22,7 @@
         "../node_modules/material-design-iconic-font/dist/css/material-design-iconic-font.min.css",
         "../node_modules/animate.css/animate.min.css",
         "../node_modules/dropzone/dist/min/dropzone.min.css",
+        "../node_modules/jqvmap/dist/jqvmap.min.css",
         "../node_modules/nouislider/distribute/nouislider.min.css",
         "styles.scss"
       ],

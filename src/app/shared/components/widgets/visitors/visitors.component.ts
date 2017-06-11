@@ -19,11 +19,16 @@ export class VisitorsComponent implements OnInit {
       borderColor: '#ebebeb',
       hoverOpacity: 1,
       selectedColor: '#00BCD4',
-      enableZoom: false,
+      enableZoom: true,
       showTooltip: true,
       normalizeFunction: 'polynomial',
-      selectedRegions: ['US', 'EN', 'NZ', 'CN', 'JP', 'SL', 'BR', 'AU'],
-      onRegionClick: function (event) {
+      selectedRegions: ['US', 'AU', 'BR', 'KR', 'JP'],
+      onLabelShow: function(event, label, code) {
+        if (code !== 'us' && code !== 'au' && code !== 'br' && code !== 'kr' && code !== 'jp') {
+          event.preventDefault();
+        }
+      },
+      onRegionClick: function(event, code, region) {
         event.preventDefault();
       }
     }

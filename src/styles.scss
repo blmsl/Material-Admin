@@ -105,12 +105,13 @@
 /*---------------------------------------
     5. Vendor Overrides
 ----------------------------------------*/
-@import "./assets/scss/vendor-overrides/flot";
-@import "./assets/scss/vendor-overrides/sparklines";
-@import "./assets/scss/vendor-overrides/select2";
-@import "./assets/scss/vendor-overrides/dropzone";
 @import "./assets/scss/vendor-overrides/angular2-color-picker";
+@import "./assets/scss/vendor-overrides/dropzone";
+@import "./assets/scss/vendor-overrides/flot";
+@import "./assets/scss/vendor-overrides/jqvmap";
 @import "./assets/scss/vendor-overrides/nouislider";
+@import "./assets/scss/vendor-overrides/select2";
+@import "./assets/scss/vendor-overrides/sparklines";
 
 
 /*---------------------------------------
