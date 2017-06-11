@@ -1,0 +1,19 @@
+// Following styles are only for demo purposes. You can remove these anytime and DO NOT use these styles in your project
+
+.demo-inline-wrapper {
+  display: inline-block;
+  margin-bottom: 30px;
+  vertical-align: top;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+  .form-group {
+    margin: 0;
+  }
+}
+
+.btn-demo > {
+  .btn, .btn-group {
+    margin: 0 5px 10px 0;
+  }
+}
