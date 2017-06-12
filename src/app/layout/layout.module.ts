@@ -68,6 +68,10 @@ const layoutRoutes: Routes = [
         { path: 'charts/flot', loadChildren: '../pages/charts/flot/flot.module#FlotModule' },
         { path: 'charts/sparklines', loadChildren: '../pages/charts/sparklines/sparklines.module#SparklineModule' },
 
+        // Login / Logout / Register / Forgot Password
+        { path: 'login', loadChildren: '../pages/login/login.module#LoginModule' },
+        { path: 'logout', loadChildren: '../pages/logout/logout.module#LogoutModule' },
+
         // Calendar
         { path: 'calendar', loadChildren: '../pages/calendar/calendar.module#CalendarModule' },
 
