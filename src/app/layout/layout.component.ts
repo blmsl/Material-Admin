@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {
+  ActivatedRoute,
   Router,
   NavigationStart,
   NavigationEnd,
@@ -7,7 +8,9 @@ import {
   NavigationError,
   RoutesRecognized,
   RouteConfigLoadStart,
-  RouteConfigLoadEnd
+  RouteConfigLoadEnd,
+  Event,
+  UrlSegment
 } from '@angular/router';
 
 @Component({
@@ -17,40 +20,29 @@ import {
 
 export class LayoutComponent implements OnInit {
   isFullscreen: boolean;
-  fullscreenUrls: string[] = ['/logout', '/login', '/register', '/forgot-password'];
+  fullscreenPaths: string[] = ['logout', 'login', 'register', 'forgot-password'];
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
 
-    router.events.subscribe(event => {
-      // NavigationStart
-      if(event instanceof NavigationStart) {
-        // console.log('NavigationStart');
-      }
-      // NavigationEnd
+    router.events.subscribe((event: Event) => {
+      // if(event instanceof NavigationStart) {
+      // }
       if(event instanceof NavigationEnd) {
-        // console.log('NavigationEnd');
-        this.isFullscreen = this.fullscreenUrls.includes(router.url) ? true : false;
+        // console.log(activatedRoute.firstChild.url['value'][0].path); // working
+        // activatedRoute.firstChild.url.subscribe((url: UrlSegment[]) => console.log(url[0].path)); // working
+        // console.log(activatedRoute.snapshot.firstChild.url[0].path); // working
+        this.isFullscreen = this.fullscreenPaths.includes(activatedRoute.firstChild.url['value'][0].path) ? true : false;
       }
-      // NavigationCancel
-      if(event instanceof NavigationCancel) {
-        // console.log('NavigationCancel');
-      }
-      // NavigationError
-      if(event instanceof NavigationError) {
-        // console.log('NavigationError');
-      }
-      // RoutesRecognized
-      if(event instanceof RoutesRecognized) {
-        // console.log('RoutesRecognized');
-      }
-      // RouteConfigLoadStart
-      if(event instanceof RouteConfigLoadStart) {
-        // console.log('RouteConfigLoadStart');
-      }
-      // RouteConfigLoadEnd
-      if(event instanceof RouteConfigLoadEnd) {
-        // console.log('RouteConfigLoadEnd');
-      }
+      // if(event instanceof NavigationCancel) {
+      // }
+      // if(event instanceof NavigationError) {
+      // }
+      // if(event instanceof RoutesRecognized) {
+      // }
+      // if(event instanceof RouteConfigLoadStart) {
+      // }
+      // if(event instanceof RouteConfigLoadEnd) {
+      // }
     });
 
   }
