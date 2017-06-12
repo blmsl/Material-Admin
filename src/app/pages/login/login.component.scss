@@ -313,17 +313,6 @@ fieldset {
     border: none
 }
 
-// 9934
-#main {
-    padding-top: 20px
-}
-
-// 9971
-#main {
-    background: #fff;
-    margin: 0
-}
-
 // 11781
 label {
     font-weight: 400
@@ -349,8 +338,7 @@ a,button,input {
 
 // 11835
 #content {
-    padding: 10px 14px;
-    position: relative
+  margin-top: 2.5rem;
 }
 
 // 11893
@@ -359,15 +347,6 @@ h5 {
     font-weight: 300;
     margin: 10px 0;
     line-height: normal
-}
-
-// 12194
-#main {
-    margin-left: 220px;
-    padding: 0;
-    padding-bottom: 52px;
-    min-height: 500px;
-    position: relative
 }
 
 // 12779
@@ -439,9 +418,4 @@ fieldset {
 // 16342
 .text-align-center,.text-center {
     text-align: center!important
-}
-
-// 17856
-#main {
-    margin-top: 0!important
 }
