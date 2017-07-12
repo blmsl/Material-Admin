@@ -1,9 +1,9 @@
 <aside class="sidebar" [class.sidebar--toggled]="sidebarVisible">
   <ul class="navigation">
-    <li routerLinkActive="active"><a [routerLink]="['/home']"><i class="zmdi zmdi-home"></i> Home</a></li>
-    <li routerLinkActive="active"><a [routerLink]="['/typography']"><i class="zmdi zmdi-format-underlined"></i> Typography</a></li>
-    <li routerLinkActive="active"><a [routerLink]="['/widgets']"><i class="zmdi zmdi-widgets"></i> Widgets</a></li>
-    <li routerLinkActive="active">
+    <li routerLinkActive="active" [class.active]="activatedNav === 'Home'"><a [routerLink]="['/home']" (click)="toggleNavigationSub('Home', $event)"><i class="zmdi zmdi-home"></i> Home</a></li>
+    <li routerLinkActive="active" [class.active]="activatedNav === 'Typography'"><a [routerLink]="['/typography']" (click)="toggleNavigationSub('Typography', $event)"><i class="zmdi zmdi-format-underlined"></i> Typography</a></li>
+    <li routerLinkActive="active" [class.active]="activatedNav === 'Widgets'"><a [routerLink]="['/widgets']" (click)="toggleNavigationSub('Widgets', $event)"><i class="zmdi zmdi-widgets"></i> Widgets</a></li>
+    <li routerLinkActive="active" [class.active]="activatedNav === 'Tables'">
       <a (click)="toggleNavigationSub('Tables', $event)"><i class="zmdi zmdi-view-list"></i> Tables</a>
 
       <ul class="navigation__sub" [@toggleHeight]="navigationSubState.Tables">
@@ -11,7 +11,7 @@
         <li routerLinkActive="active"><a [routerLink]="['/table/data-table']">Data Table</a></li>
       </ul>
     </li>
-    <li routerLinkActive="active">
+    <li routerLinkActive="active" [class.active]="activatedNav === 'Forms'">
       <a (click)="toggleNavigationSub('Forms', $event)"><i class="zmdi zmdi-collection-text"></i> Forms</a>
 
       <ul class="navigation__sub" [@toggleHeight]="navigationSubState.Forms">
@@ -20,7 +20,7 @@
         <li routerLinkActive="active"><a [routerLink]="['/form/form-validation']">Form Validation</a></li>
       </ul>
     </li>
-    <li routerLinkActive="active">
+    <li routerLinkActive="active" [class.active]="activatedNav === 'UserInterface'">
       <a (click)="toggleNavigationSub('UserInterface', $event)"><i class="zmdi zmdi-swap-alt"></i> User Interface</a>
 
       <ul class="navigation__sub" [@toggleHeight]="navigationSubState.UserInterface">
@@ -37,7 +37,7 @@
         <li routerLinkActive="active"><a [routerLink]="['/user-interface/pagination']">Pagination</a></li>
       </ul>
     </li>
-    <li routerLinkActive="active">
+    <li routerLinkActive="active" [class.active]="activatedNav === 'Components'">
       <a (click)="toggleNavigationSub('Components', $event)"><i class="zmdi zmdi-view-compact"></i> ngx-bootstrap Components</a>
 
       <ul class="navigation__sub" [@toggleHeight]="navigationSubState.Components">
@@ -61,7 +61,7 @@
       </ul>
     </li>
 
-    <li routerLinkActive="active">
+    <li routerLinkActive="active" [class.active]="activatedNav === 'Charts'">
       <a (click)="toggleNavigationSub('Charts', $event)"><i class="zmdi zmdi-trending-up"></i> Charts</a>
 
       <ul class="navigation__sub" [@toggleHeight]="navigationSubState.Charts">
@@ -70,8 +70,8 @@
       </ul>
     </li>
 
-    <li routerLinkActive="active"><a [routerLink]="['/calendar']"><i class="zmdi zmdi-calendar"></i> Calendar</a></li>
+    <li routerLinkActive="active" [class.active]="activatedNav === 'Calendar'"><a [routerLink]="['/calendar']" (click)="toggleNavigationSub('Calendar', $event)"><i class="zmdi zmdi-calendar"></i> Calendar</a></li>
 
-    <li routerLinkActive="active"><a [routerLink]="['/sample-pages']"><i class="zmdi zmdi-collection-item"></i> Sample Pages</a></li>
+    <li routerLinkActive="active" [class.active]="activatedNav === 'SamplePages'"><a [routerLink]="['/sample-pages']" (click)="toggleNavigationSub('SamplePages', $event)"><i class="zmdi zmdi-collection-item"></i> Sample Pages</a></li>
   </ul>
 </aside>
