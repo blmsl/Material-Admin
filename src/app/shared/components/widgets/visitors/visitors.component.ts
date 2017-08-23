@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'widget-visitors',
+  selector: 'app-widget-visitors',
   templateUrl: './visitors.component.html',
   styleUrls: [
       './visitors.component.scss'
   ]
 })
 export class VisitorsComponent implements OnInit {
-  visitorsMap:any;
-  visitorsData:any;
+  visitorsMap: any;
+  visitorsData: any;
 
   constructor() {
     this.visitorsMap = {

@@ -1,18 +1,18 @@
 /// <reference types="dropzone/"/>
-import { Directive, Input, ElementRef } from '@angular/core';
+import { Directive, Input, ElementRef, OnInit } from '@angular/core';
 declare var jQuery: any;
 
 @Directive ({
-    selector: '[dropzone]'
+    selector: '[appDropzone]'
 })
 
-export class DropzoneDirective {
-    @Input() private posturl:any;
+export class DropzoneDirective implements OnInit {
+    @Input() private posturl: any;
 
     constructor(private el: ElementRef) {}
 
     ngOnInit() {
-        let initDropzone = jQuery(this.el.nativeElement)
+        const initDropzone = jQuery(this.el.nativeElement)
 
         initDropzone.dropzone({
             url: this.posturl,

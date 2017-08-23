@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'widget-recent-posts',
+  selector: 'app-widget-recent-posts',
   templateUrl: './recent-posts.component.html'
 })
 export class RecentPostsComponent implements OnInit {
-  recentPostData:any;
+  recentPostData: any;
 
   constructor() {
     this.recentPostData = [
@@ -37,7 +37,6 @@ export class RecentPostsComponent implements OnInit {
     ]
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }

@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'widget-todo-lists',
+  selector: 'app-widget-todo-lists',
   templateUrl: './todo-lists.component.html',
   styleUrls: ['./todo-lists.component.scss']
 })
 export class TodoListsComponent implements OnInit {
-  todoListData:any;
+  todoListData: any;
 
   constructor() {
     this.todoListData = [

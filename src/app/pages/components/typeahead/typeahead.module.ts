@@ -5,23 +5,23 @@ import { RouterModule, Routes } from '@angular/router';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
 
-import { TypeaheadComponent } from "./typeahead.component";
+import { TypeaheadComponent } from './typeahead.component';
 
-const typeaheadRoutes : Routes = [
-    { path: '', component: TypeaheadComponent }
+const typeaheadRoutes: Routes = [
+  { path: '', component: TypeaheadComponent }
 ]
 
-@NgModule ({
-    declarations: [
-        TypeaheadComponent
-    ],
-    imports: [
-        CommonModule,
-        FormsModule,
-        BsDropdownModule.forRoot(),
-        TypeaheadModule.forRoot(),
-        RouterModule.forChild(typeaheadRoutes)
-    ]
+@NgModule({
+  declarations: [
+    TypeaheadComponent
+  ],
+  imports: [
+    CommonModule,
+    FormsModule,
+    BsDropdownModule.forRoot(),
+    TypeaheadModule.forRoot(),
+    RouterModule.forChild(typeaheadRoutes)
+  ]
 })
 
-export class TypeaheadComponentModule {  }
+export class TypeaheadComponentModule { }

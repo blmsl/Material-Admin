@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'widget-recent-signups',
+  selector: 'app-widget-recent-signups',
   templateUrl: './recent-signups.component.html',
   styleUrls: ['./recent-signups.component.scss']
 })
@@ -26,7 +26,7 @@ export class RecentSignupsComponent implements OnInit {
       highlightLineColor: '#fff'
     };
 
-    this.signupChartData = [9,4,6,5,6,4,5,7,9,3,6,5,9];
+    this.signupChartData = [9, 4, 6, 5, 6, 4, 5, 7, 9, 3, 6, 5, 9];
 
     this.signupData = [
       {
@@ -138,7 +138,7 @@ export class RecentSignupsComponent implements OnInit {
         name: 'Sebastian Erik',
         letter: 'S',
         avatar: ''
-      },{
+      }, {
         name: 'Maria Mack',
         letter: 'M',
         avatar: ''

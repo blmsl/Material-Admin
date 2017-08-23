@@ -20,7 +20,7 @@ export class CssAnimationsComponent implements OnInit {
     zoomEntrances: '',
     zoomExits: ''
   }
-  animationDuration: number = 0
+  animationDuration = 0
 
   setAnimation(animationGroup, animation) {
     this.animationClasses[animationGroup] = animation

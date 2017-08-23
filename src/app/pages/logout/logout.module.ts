@@ -8,11 +8,11 @@ import { SharedModule } from '../../shared/shared.module';
 
 import { LogoutComponent } from './logout.component';
 
-const logoutRoutes : Routes = [
+const logoutRoutes: Routes = [
   { path: '', component: LogoutComponent }
 ];
 
-@NgModule ({
+@NgModule({
   declarations: [
     LogoutComponent
   ],

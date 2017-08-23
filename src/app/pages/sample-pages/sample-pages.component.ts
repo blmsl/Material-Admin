@@ -8,7 +8,6 @@ export class SamplePagesComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }

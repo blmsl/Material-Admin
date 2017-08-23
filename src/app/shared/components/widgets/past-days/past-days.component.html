@@ -5,7 +5,7 @@
   </div>
 
   <div class="widget-past-days__main">
-    <div flot [options]="pastDaysChartOptions" [dataset]="pastDaysChartData" [height]="100"></div>
+    <div appFlot [options]="pastDaysChartOptions" [dataset]="pastDaysChartData" [height]="100"></div>
   </div>
 
   <div class="listview listview--dark listview--striped">
@@ -16,7 +16,7 @@
       </div>
 
       <div class="widget-past-days__chart hidden-sm">
-        <sparkline [dataset]="pastDaysData.chartData" [options]="pastDaysSubChartDataOptions"></sparkline>
+        <div appSparkline [dataset]="pastDaysData.chartData" [options]="pastDaysSubChartDataOptions"></div>
       </div>
     </div>
   </div>

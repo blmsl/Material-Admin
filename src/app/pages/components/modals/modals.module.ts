@@ -4,22 +4,22 @@ import { RouterModule, Routes } from '@angular/router';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ModalModule } from 'ngx-bootstrap/modal';
 
-import { ModalsComponent } from "./modals.component";
+import { ModalsComponent } from './modals.component';
 
-const modalsRoutes : Routes = [
-    { path: '', component: ModalsComponent }
+const modalsRoutes: Routes = [
+  { path: '', component: ModalsComponent }
 ]
 
-@NgModule ({
-    declarations: [
-        ModalsComponent
-    ],
-    imports: [
-        CommonModule,
-        BsDropdownModule.forRoot(),
-        ModalModule.forRoot(),
-        RouterModule.forChild(modalsRoutes)
-    ]
+@NgModule({
+  declarations: [
+    ModalsComponent
+  ],
+  imports: [
+    CommonModule,
+    BsDropdownModule.forRoot(),
+    ModalModule.forRoot(),
+    RouterModule.forChild(modalsRoutes)
+  ]
 })
 
-export class ModalsModule {  }
+export class ModalsModule { }

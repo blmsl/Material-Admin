@@ -5,19 +5,19 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 import { TypographyComponent } from './typography.component';
 
-const typographyRoutes : Routes = [
-    { path: '', component: TypographyComponent }
+const typographyRoutes: Routes = [
+  { path: '', component: TypographyComponent }
 ];
 
-@NgModule ({
-    declarations: [
-        TypographyComponent
-    ],
-    imports: [
-        CommonModule,
-        BsDropdownModule.forRoot(),
-        RouterModule.forChild(typographyRoutes)
-    ]
+@NgModule({
+  declarations: [
+    TypographyComponent
+  ],
+  imports: [
+    CommonModule,
+    BsDropdownModule.forRoot(),
+    RouterModule.forChild(typographyRoutes)
+  ]
 })
 
-export class TypographyModule {  }
+export class TypographyModule { }

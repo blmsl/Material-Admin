@@ -3,7 +3,7 @@ import { LayoutComponent } from './layout.component';
 
 export const layoutRoutes: Routes = [
   { path: '', component: LayoutComponent, children: [
-    //Home
+    // Home
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', loadChildren: '../pages/home/home.module#HomeModule' },
 
@@ -24,7 +24,10 @@ export const layoutRoutes: Routes = [
 
     // User Interface
     { path: 'user-interface/colors', loadChildren: '../pages/user-interface/colors/colors.module#ColorsModule' },
-    { path: 'user-interface/css-animations', loadChildren: '../pages/user-interface/css-animations/css-animations.module#CssAnimationsModule' },
+    {
+      path: 'user-interface/css-animations',
+      loadChildren: '../pages/user-interface/css-animations/css-animations.module#CssAnimationsModule'
+    },
     { path: 'user-interface/buttons', loadChildren: '../pages/user-interface/buttons/buttons.module#ButtonsModule' },
     { path: 'user-interface/icons', loadChildren: '../pages/user-interface/icons/icons.module#IconsModule' },
     { path: 'user-interface/cards', loadChildren: '../pages/user-interface/cards/cards.module#CardsModule' },

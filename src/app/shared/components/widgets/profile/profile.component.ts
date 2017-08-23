@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'widget-profile',
+  selector: 'app-widget-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 }

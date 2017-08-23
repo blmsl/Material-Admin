@@ -4,22 +4,22 @@ import { RouterModule, Routes } from '@angular/router';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 
-import { CollapseComponent } from "./collapse.component";
+import { CollapseComponent } from './collapse.component';
 
-const collapseRoutes : Routes = [
-    { path: '', component: CollapseComponent }
+const collapseRoutes: Routes = [
+  { path: '', component: CollapseComponent }
 ]
 
-@NgModule ({
-    declarations: [
-        CollapseComponent
-    ],
-    imports: [
-        CommonModule,
-        BsDropdownModule.forRoot(),
-        CollapseModule.forRoot(),
-        RouterModule.forChild(collapseRoutes)
-    ]
+@NgModule({
+  declarations: [
+    CollapseComponent
+  ],
+  imports: [
+    CommonModule,
+    BsDropdownModule.forRoot(),
+    CollapseModule.forRoot(),
+    RouterModule.forChild(collapseRoutes)
+  ]
 })
 
-export class CollapseComponentModule {  }
+export class CollapseComponentModule { }

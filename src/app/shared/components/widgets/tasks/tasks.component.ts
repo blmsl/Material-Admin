@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'widget-tasks',
+  selector: 'app-widget-tasks',
   templateUrl: './tasks.component.html'
 })
 
@@ -9,7 +9,6 @@ export class TasksComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }

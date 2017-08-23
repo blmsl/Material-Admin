@@ -1,33 +1,33 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { trigger, state, style, animate, transition } from '@angular/animations';
-import { SharedService } from "../../shared/services/shared.service";
+import { SharedService } from '../../shared/services/shared.service';
 
 @Component({
-    selector: 'app-navigation',
-    templateUrl: './navigation.component.html',
-    styleUrls: ['./navigation.component.scss'],
-    animations: [
-        trigger('toggleHeight', [
-            state('inactive', style({
-                height: '0',
-                opacity: '0'
-            })),
-            state('active', style({
-                height: '*',
-                opacity: '1'
-            })),
-            transition('inactive => active', animate('200ms ease-in')),
-            transition('active => inactive', animate('200ms ease-out'))
-        ])
-    ]
+  selector: 'app-navigation',
+  templateUrl: './navigation.component.html',
+  styleUrls: ['./navigation.component.scss'],
+  animations: [
+    trigger('toggleHeight', [
+      state('inactive', style({
+        height: '0',
+        opacity: '0'
+      })),
+      state('active', style({
+        height: '*',
+        opacity: '1'
+      })),
+      transition('inactive => active', animate('200ms ease-in')),
+      transition('active => inactive', animate('200ms ease-out'))
+    ])
+  ]
 })
 export class NavigationComponent implements OnInit {
   sidebarVisible: boolean;
   activatedNav: string;
 
   // Sub menu visibilities
-  navigationSubState:any = {
+  navigationSubState: any = {
     Tables: 'inactive',
     Forms: 'inactive',
     UserInterface: 'inactive',
@@ -37,7 +37,7 @@ export class NavigationComponent implements OnInit {
   };
 
   initActiveNavigation(path) {
-    switch(path) {
+    switch (path) {
       case 'home':
         this.activatedNav = 'Home';
         break;
@@ -81,10 +81,10 @@ export class NavigationComponent implements OnInit {
   toggleNavigationSub(menu: string, event) {
     event.preventDefault();
 
-    let parentIsActive:boolean = event.currentTarget.parentElement.className.split(' ').includes('active');
+    const parentIsActive: boolean = event.currentTarget.parentElement.className.split(' ').includes('active');
     this.activatedNav = (this.activatedNav !== menu || parentIsActive) ? menu : '';
 
-    for (var key of Object.keys(this.navigationSubState)) {
+    for (const key of Object.keys(this.navigationSubState)) {
       if (key !== menu && this.navigationSubState[key] === 'active') {
         this.navigationSubState[key] = 'inactive';
       }
@@ -98,11 +98,10 @@ export class NavigationComponent implements OnInit {
       this.sidebarVisible = value
     })
 
-    let path = activatedRoute.firstChild.url['value'][0].path;
+    const path = activatedRoute.firstChild.url['value'][0].path;
     this.initActiveNavigation(path);
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }

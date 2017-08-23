@@ -1,14 +1,14 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'header-search',
+  selector: 'app-header-search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss']
 })
 
 export class SearchComponent implements OnInit {
   searchStatus = false;
-  searchValue:string = '';
+  searchValue = '';
 
   closeSearch() {
     this.searchStatus = false; // Close the search block
@@ -17,6 +17,5 @@ export class SearchComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 }

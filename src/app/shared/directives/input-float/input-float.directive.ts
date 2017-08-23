@@ -1,25 +1,26 @@
-import { Directive, ElementRef, Renderer } from "@angular/core";
+import { Directive, ElementRef, Renderer, OnInit } from '@angular/core';
 
 
-@Directive ({
-    selector: '[formControlFloat]',
-    host: {
-        '(blur)': 'onBlur()'
-    }
+@Directive({
+  selector: '[appFormControlFloat]',
+  host: {
+    '(blur)': 'onBlur()'
+  }
 })
 
-export class InputFloatDirective {
-    constructor (private el: ElementRef, private renderer: Renderer) { }
-    elem:any = this.el.nativeElement;
+export class InputFloatDirective implements OnInit {
+  elem: any = this.el.nativeElement;
 
-    onBlur() {
-        let status = true ? this.elem.value : false;
-        this.renderer.setElementClass(this.elem, 'form-control--active', status)
-    }
+  constructor(private el: ElementRef, private renderer: Renderer) { }
 
-    ngOnInit() {
-        if(this.elem.value) {
-            this.renderer.setElementClass(this.elem, 'form-control--active', true)
-        }
+  onBlur() {
+    const status = true ? this.elem.value : false;
+    this.renderer.setElementClass(this.elem, 'form-control--active', status)
+  }
+
+  ngOnInit() {
+    if (this.elem.value) {
+      this.renderer.setElementClass(this.elem, 'form-control--active', true)
     }
+  }
 }

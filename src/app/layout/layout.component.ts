@@ -13,7 +13,7 @@ export class LayoutComponent implements OnInit {
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
 
     router.events.subscribe((event: Event) => {
-      if(event instanceof NavigationEnd) {
+      if (event instanceof NavigationEnd) {
         // console.log(activatedRoute.firstChild.url['value'][0].path); // working
         // activatedRoute.firstChild.url.subscribe((url: UrlSegment[]) => console.log(url[0].path)); // working
         // console.log(activatedRoute.snapshot.firstChild.url[0].path); // working
@@ -23,6 +23,5 @@ export class LayoutComponent implements OnInit {
 
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 }

@@ -27,38 +27,28 @@
       <h3 class="card-block__title">Complete</h3>
       <br>
 
-      <pagination [boundaryLinks]="true"
-                  [totalItems]="paginTotalItems"
-                  [(ngModel)]="paginCurrentPage">
+      <pagination [boundaryLinks]="true" [totalItems]="paginTotalItems" [(ngModel)]="paginCurrentPage">
       </pagination>
 
       <br>
       <h3 class="card-block__title">Boundary links disabled</h3>
       <br>
 
-      <pagination [totalItems]="paginTotalItems"
-                  [(ngModel)]="paginCurrentPage"
-                  (pageChanged)="pageChanged($event)">
+      <pagination [totalItems]="paginTotalItems" [(ngModel)]="paginCurrentPage" (pageChanged)="pageChanged($event)">
       </pagination>
 
       <br>
       <h3 class="card-block__title">Direction links disabled</h3>
       <br>
 
-      <pagination [directionLinks]="false"
-                  [boundaryLinks]="true"
-                  [totalItems]="paginTotalItems"
-                  [(ngModel)]="paginCurrentPage">
+      <pagination [directionLinks]="false" [boundaryLinks]="true" [totalItems]="paginTotalItems" [(ngModel)]="paginCurrentPage">
       </pagination>
 
       <br>
       <h3 class="card-block__title">Number only</h3>
       <br>
 
-      <pagination [directionLinks]="false"
-                  [totalItems]="paginTotalItems"
-                  [(ngModel)]="paginCurrentPage"
-                  (numPages)="paginNumPages = $event">
+      <pagination [directionLinks]="false" [totalItems]="paginTotalItems" [(ngModel)]="paginCurrentPage" (numPages)="paginNumPages = $event">
       </pagination>
 
       <br>
@@ -79,19 +69,13 @@
     </div>
 
     <div class="card-block">
-      <pagination [totalItems]="paginBigTotalItems"
-                  [(ngModel)]="paginBigCurrentPage"
-                  [maxSize]="paginMaxSize"
-                  [boundaryLinks]="true">
+      <pagination [totalItems]="paginBigTotalItems" [(ngModel)]="paginBigCurrentPage" [maxSize]="paginMaxSize" [boundaryLinks]="true">
       </pagination>
 
       <br>
 
-      <pagination [totalItems]="paginBigTotalItems"
-                  [(ngModel)]="paginBigCurrentPage"
-                  [maxSize]="paginMaxSize"
-                  [boundaryLinks]="true"
-                  [rotate]="false" (numPages)="paginNumPages = $event">
+      <pagination [totalItems]="paginBigTotalItems" [(ngModel)]="paginBigCurrentPage" [maxSize]="paginMaxSize" [boundaryLinks]="true"
+        [rotate]="false" (numPages)="paginNumPages = $event">
       </pagination>
 
       <br>
