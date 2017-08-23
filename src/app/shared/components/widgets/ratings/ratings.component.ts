@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'widget-ratings',
+  selector: 'app-widget-ratings',
   templateUrl: './ratings.component.html',
   styleUrls: ['./ratings.component.scss']
 })
@@ -33,7 +33,6 @@ export class RatingsComponent implements OnInit {
     ]
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }

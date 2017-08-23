@@ -1,14 +1,10 @@
-import { Directive, Input, ElementRef, OnInit } from '@angular/core';
+import { Directive, HostListener, Input, ElementRef, OnInit } from '@angular/core';
 
 declare var jQuery: any;
 
 @Directive({
-  selector: '[appFlot]',
-  host: {
-    '(window:resize)': 'onResize($event)'
-  }
+  selector: '[appFlot]'
 })
-
 export class FlotDirective implements OnInit {
   @Input() private options: any;
   @Input() private dataset: any;
@@ -17,7 +13,8 @@ export class FlotDirective implements OnInit {
 
   constructor(private el: ElementRef) { }
 
-  onResize() {
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
     this.initFlot.plot(
       this.dataset,
       this.options
