@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'widget-photos',
+  selector: 'app-widget-photos',
   templateUrl: './photos.component.html',
   styleUrls: ['./photos.component.scss']
 })
