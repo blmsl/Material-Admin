@@ -26,6 +26,12 @@ export class FlotComponent implements OnInit {
       hoverable: true,
       clickable: true
     },
+    tooltip: {
+      show: true,
+      content: '%s | x: %x.2; y: %y.2', // round to 2 decimal places
+      defaultTheme: false,
+      cssClass: 'flot-tooltip'
+    },
     xaxis: {
       tickColor: '#f8f8f8',
       tickDecimals: 0,
@@ -103,7 +109,12 @@ export class FlotComponent implements OnInit {
       hoverable: true,
       clickable: true
     },
-
+    tooltip: {
+      show: true,
+      content: '%s | x: %x; y: %y',
+      defaultTheme: false,
+      cssClass: 'flot-tooltip'
+    },
     yaxis: {
       tickColor: '#f8f8f8',
       tickDecimals: 0,
@@ -114,7 +125,6 @@ export class FlotComponent implements OnInit {
       },
       shadowSize: 0
     },
-
     xaxis: {
       tickColor: '#fff',
       tickDecimals: 0,
@@ -151,7 +161,7 @@ export class FlotComponent implements OnInit {
       data: [[1, 100], [2, 20], [3, 60], [4, 90], [5, 80], [6, 10], [7, 5]],
       color: '#f5c942'
     }
-  ]
+  ];
 
 
   // Bar Chart
@@ -170,7 +180,12 @@ export class FlotComponent implements OnInit {
       hoverable: true,
       clickable: true
     },
-
+    tooltip: {
+      show: true,
+      content: '%s | x: %x; y: %y', // round to 2 decimal places
+      defaultTheme: false,
+      cssClass: 'flot-tooltip'
+    },
     yaxis: {
       tickColor: '#f8f8f8',
       tickDecimals: 0,
@@ -181,7 +196,6 @@ export class FlotComponent implements OnInit {
       },
       shadowSize: 0
     },
-
     xaxis: {
       tickColor: '#fff',
       tickDecimals: 0,
@@ -228,7 +242,7 @@ export class FlotComponent implements OnInit {
         order: 2
       }
     }
-  ]
+  ];
 
 
   // Pie Chart
@@ -245,9 +259,9 @@ export class FlotComponent implements OnInit {
       hoverable: true,
       clickable: true
     },
-    tooltip: true,
-    tooltipOpts: {
-      content: '%p.0%, %s', // show percentages, rounding to 2 decimal places
+    tooltip: {
+      show: true,
+      content: '%p.2%, %s', // show percentages, round to 2 decimal places
       shifts: {
         x: 20,
         y: 0
