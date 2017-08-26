@@ -6,7 +6,6 @@ declare var jQuery: any;
 })
 
 export class SparklineDirective implements OnInit {
-  @Input() private type: string;
   @Input() private options: any;
   @Input() private dataset: any;
 
