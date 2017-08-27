@@ -1,4 +1,5 @@
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -16,6 +17,7 @@ const timePickerRoutes: Routes = [
   ],
   imports: [
     CommonModule,
+    FormsModule,
     BsDropdownModule.forRoot(),
     TimepickerModule.forRoot(),
     RouterModule.forChild(timePickerRoutes)
