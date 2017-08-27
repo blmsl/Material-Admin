@@ -54,7 +54,7 @@ export const layoutRoutes: Routes = [
     { path: 'components/typeahead', loadChildren: '../pages/components/typeahead/typeahead.module#TypeaheadComponentModule' },
     { path: 'components/datepicker', loadChildren: '../pages/components/datepicker/datepicker.module#DatepickerComponentModule' },
     { path: 'components/pagination', loadChildren: '../pages/components/pagination/pagination.module#PaginationComponentModule' },
-    { path: 'components/time-picker', loadChildren: '../pages/components/time-picker/time-picker.module#TimepickerComponentModule' },
+    { path: 'components/timepicker', loadChildren: '../pages/components/timepicker/timepicker.module#TimepickerComponentModule' },
 
     // Charts
     { path: 'charts/flot', loadChildren: '../pages/charts/flot/flot.module#FlotModule' },

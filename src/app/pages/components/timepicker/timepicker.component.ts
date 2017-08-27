@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-time-picker',
-  templateUrl: './time-picker.component.html',
-  styleUrls: ['./time-picker.component.scss']
+  selector: 'app-timepicker',
+  templateUrl: './timepicker.component.html',
+  styleUrls: ['./timepicker.component.scss']
 })
 export class TimePickerComponent implements OnInit {
   isTimePickerEnabled = true;

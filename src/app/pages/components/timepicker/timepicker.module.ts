@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TimepickerModule } from 'ngx-bootstrap/timepicker';
 
-import { TimePickerComponent } from './time-picker.component';
+import { TimePickerComponent } from './timepicker.component';
 
 const timePickerRoutes: Routes = [
   { path: '', component: TimePickerComponent }
