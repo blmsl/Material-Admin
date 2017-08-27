@@ -7,7 +7,6 @@ import { EasyPieChartDirective } from './directives/easy-pie-chart/easy-pie-char
 import { JqvMapDirective } from './directives/jqvmap/jqvmap.directive';
 import { FlotDirective } from './directives/flot/flot.directive';
 import { SparklineDirective } from './directives/sparklines/sparkline.directive';
-import { AutosizeDirective } from './directives/autosize/autosize.directive';
 import { DropzoneDirective } from './directives/dropzone/dropzone.directive';
 
 import { TodoListsComponent } from './components/widgets/todo-lists/todo-lists.component';
@@ -31,7 +30,6 @@ import { InputFloatDirective } from './directives/input-float/input-float.direct
     JqvMapDirective,
     FlotDirective,
     SparklineDirective,
-    AutosizeDirective,
     DropzoneDirective,
     InputFloatDirective,
 
@@ -60,7 +58,6 @@ import { InputFloatDirective } from './directives/input-float/input-float.direct
     JqvMapDirective,
     FlotDirective,
     SparklineDirective,
-    AutosizeDirective,
     DropzoneDirective,
     InputFloatDirective,
 
