@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 import { EasyPieChartDirective } from './directives/easy-pie-chart/easy-pie-chart.directive';
 import { JqvMapDirective } from './directives/jqvmap/jqvmap.directive';
@@ -50,7 +51,8 @@ import { InputFloatDirective } from './directives/input-float/input-float.direct
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    BsDropdownModule.forRoot()
   ],
   exports: [
     // Directives
