@@ -9,22 +9,27 @@
   .actions {
     position: absolute;
     top: 0.8rem;
-    right: 0.8rem;
+    right: 1rem;
   }
+}
+
+.listview__scroll {
+  overflow-y: auto;
 }
 
 .listview__item {
   display: flex;
+  align-items: center;
   padding: 15px $card-spacer-x;
   @include transition(background-color 300ms);
 }
 
 .listview__img {
-  width: 40px;
-  height: 40px;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   vertical-align: top;
-  margin: -1px 1.5rem 0 -2px;
+  margin: -0.1rem 1.2rem 0 -0.2rem;
 }
 
 .listview__content {
@@ -57,7 +62,7 @@
 
 .listview__attrs {
   flex: 1 100%;
-  margin-top: 5px;
+  margin-top: 0.5rem;
 
   & > span {
     padding: 0.45rem 0.7rem 0.5rem;
@@ -72,23 +77,23 @@
 
 // Listview modifier classes
 .listview {
-  &:not(.listview--dark) {
-
-    &.listview--hover {
-      .listview__item:hover {
-        background-color: rgba($black, 0.025);
-      }
+  &:not(.listview--inverse) {
+    &.listview--hover .listview__item:hover,
+    &.listview--striped .listview__item:nth-child(even),
+    .listview__item--active {
+      background-color: rgba(0, 0, 0, 0.035);
     }
-
-    &.listview--striped {
-      .listview__item:nth-child(even) {
-        background-color: rgba($black, 0.025);
+    &.listview--bordered {
+      .listview__item {
+        & + .listview__item {
+          border-top: 1px solid rgba(0, 0, 0, 0.04);
+        }
       }
     }
   }
 }
 
-.listview--dark {
+.listview--inverse {
   &.listview--striped {
     .listview__item:nth-child(even) {
       background-color: rgba($white, 0.1);
@@ -101,4 +106,12 @@
       background-color: transparent;
     }
   }
+}
+
+.listview__actions {
+  margin-left: auto;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  margin-right: -1rem;
+  margin-top: -0.5rem;
 }

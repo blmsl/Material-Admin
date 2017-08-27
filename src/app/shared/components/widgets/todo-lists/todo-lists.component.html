@@ -1,26 +1,35 @@
-<div class="card card-inverse widget-todo">
+<div class="card todo">
   <div class="card-header">
     <h2 class="card-title">Todo lists</h2>
     <small class="card-subtitle">Venenatis portauam Inceptos ameteiam</small>
   </div>
 
-  <div class="listview listview--dark">
+  <div class="listview">
     <div *ngFor="let todoListData of todoListData" class="listview__item">
-      <label class="custom-control custom-control--light custom-control--char widget-todo__item">
-                <input class="custom-control-input" type="checkbox" value="" checked="{{ todoListData.checked }}">
-                <span class="custom-control--char__helper"><i>{{ todoListData.letter }}</i></span>
-                <div class="widget-todo__info">
-                    <span>{{ todoListData.todo }}</span>
-                    <small>{{ todoListData.venue }}</small>
-                </div>
+      <label class="custom-control custom-control--char todo__item">
+        <input class="custom-control-input" type="checkbox" value="" checked="{{ todoListData.checked }}">
+        <span class="custom-control--char__helper"><i class="bg-{{todoListData.color}}">{{ todoListData.letter }}</i></span>
+        <div class="todo__info">
+          <span>{{ todoListData.todo }}</span>
+          <small>{{ todoListData.venue }}</small>
+        </div>
 
-                <div class="listview__attrs">
-                    <span>{{ todoListData.category }}</span>
-                    <span>{{ todoListData.priority }}</span>
-                </div>
-            </label>
+        <div class="listview__attrs">
+          <span>{{ todoListData.category }}</span>
+          <span>{{ todoListData.priority }}</span>
+        </div>
+      </label>
+      <div class="actions listview__actions">
+        <div dropdown class="actions__item">
+          <i dropdownToggle class="zmdi zmdi-more-vert"></i>
+          <div *dropdownMenu class="dropdown-menu dropdown-menu-right">
+            <a href="" class="dropdown-item">Mark as completed</a>
+            <a href="" class="dropdown-item">Delete</a>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <a href="" class="view-more view-more--light">View More</a>
+    <a href="" class="view-more">View More</a>
   </div>
 </div>
