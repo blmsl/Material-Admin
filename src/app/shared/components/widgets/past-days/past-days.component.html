@@ -8,7 +8,7 @@
     <div appFlot [options]="pastDaysChartOptions" [dataset]="pastDaysChartData" [height]="100"></div>
   </div>
 
-  <div class="listview listview--dark listview--striped">
+  <div class="listview listview--striped">
     <div *ngFor="let pastDaysData of pastDaysData" class="listview__item">
       <div class="widget-past-days__info">
         <small>{{ pastDaysData.title }}</small>
